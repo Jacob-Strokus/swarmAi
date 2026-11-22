@@ -1,0 +1,15 @@
+[package]
+name = "swarm-scan"
+version = "0.1.0"
+edition = "2021"
+description = "Performance-critical primitives for swamAi (exposed to Python via PyO3)."
+
+[lib]
+name = "swarm_scan"
+# cdylib → importable from Python once built with maturin.
+# rlib   → usable from other Rust crates in the workspace.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Uncomment when wiring the Python binding:
+# pyo3 = { version = "0.22", features = ["extension-module"] }

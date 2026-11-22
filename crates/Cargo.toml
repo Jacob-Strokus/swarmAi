@@ -1,0 +1,6 @@
+# Rust workspace for performance-critical swarm components.
+# Hot paths (packet capture, high-rate scanners, parsers) land here and get
+# exposed to the Python core via PyO3/maturin.
+[workspace]
+resolver = "2"
+members = ["swarm-scan"]
